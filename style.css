@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+@font-face {
+    font-family: 'Norse';
+    src: url(/assets/Font/Norse-Bold.otf) format('Opentype');
+    font-weight: bold;
+}
+
+:root {
+    font-size: 100%;
+    font-size: 16px;
+    line-height: 1.5;
+    --PRIMARY-COLOR : #8d59ff;
+    --SECONDARY-COLOR: #5c627c;
+    --TEXT-COLOR: #fff;
+    --BG-COLOR: #06081e;
+    --ERROR-COLOR: #d42121;
+    --SUCCESS-COLOR : #26a226;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    font-family: 'Norse';
+    color: var(--TEXT-COLOR);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+h1 img {
+    height: 55px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.small {
+    font-size: 80%;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: var(--PRIMARY-COLOR);    
+    outline: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.pic {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(#0005,#000b), url(/assets/images/background.jpg);
+    background-size: cover;
+}
+
+.pic p {
+    color: var(--SECONDARY-COLOR);
+    font-size: 70%;
+}
+
+.pic a {
+    color: var(--SECONDARY-COLOR);
+}
+
+.signUp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px ;
+    align-items: center;
+    background-color: var(--BG-COLOR);
+    color: var(--TEXT-COLOR);
+}
+
+.signUp span {
+    color: var(--SECONDARY-COLOR);
+    margin: 10px;
+}
+
+.socials button {
+    display: block;
+    margin: 10px auto;
+    min-width: 250px;
+    height: 30px;
+    padding: 5px;
+    color: var(--TEXT-COLOR);
+    background-color: var(--BG-COLOR);
+    border: var(--SECONDARY-COLOR) 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.socials button:hover {
+    background-color: var(--PRIMARY-COLOR);
+    color: var(--BG-COLOR);
+}
+
+.socials button i {
+    margin-inline: 5px;
+    font-size: 17px;
+}
+
+#separator {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    min-width: 30px;
+}
+
+
+#separator::before, #separator::after{
+    content: "";
+    height: 2px;
+    width: 120px;
+    background-color: var(--SECONDARY-COLOR);
+    display: block;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+}
+
+form > div {
+    width: 70%;
+    min-width: 250px;
+    margin: 10px auto;
+    position: relative;
+}
+
+form div label {
+    display: block;
+    font-size: 80%;
+}
+
+form div input {
+    width: 100%;
+    height: 20px;
+    padding: 5px;
+    outline: none;
+    background-color: var(--BG-COLOR);
+    color: var(--TEXT-COLOR);
+    border: var(--SECONDARY-COLOR) 1px solid;
+    border-radius: 5px;
+}
+
+form div input:focus {
+    box-shadow: var(--PRIMARY-COLOR) 1px 1px 1px;
+}
+
+input.error {
+    border: var(--ERROR-COLOR) 1px solid ;
+    box-shadow: var(--ERROR-COLOR) 1px 1px 1px;
+    color: var(--ERROR-COLOR);
+}
+
+input.success {
+    border: var(--SUCCESS-COLOR) 1px solid ;
+    box-shadow: var(--SUCCESS-COLOR) 1px 1px 1px;
+}
+
+div .fa-eye-slash {
+    position: absolute;
+    right: 3px;
+    top: 26px;
+    background-color: var(--BG-COLOR);
+    color: var(--SECONDARY-COLOR);
+    cursor: pointer;
+}
+
+div .fa-eye {
+    position: absolute;
+    right: 3px;
+    top: 26px;
+    background-color: var(--BG-COLOR);
+    color: var(--TEXT-COLOR);
+    cursor: pointer;
+}
+
+div p.errorDisplay {
+    margin: 2px;
+    height: 0.5rem;
+    color: var(--ERROR-COLOR);
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--BG-COLOR);
+    border: var(--SECONDARY-COLOR) 1px solid;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+input[type="checkbox"]:after { 
+    content: "\2714";
+    transform: rotate(-5deg);
+    font-size: 17px;
+    color: var(--BG-COLOR);
+    
+}
+
+input[type="checkbox"]:checked {
+    background-color: var(--PRIMARY-COLOR);
+}
+
+form > label {
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+form button {
+    min-width: 250px;
+    width: 70%;
+    margin: 5px auto;
+    height: 30px;
+    padding: 5px;
+    text-transform: uppercase;
+    font-size: 80%;
+    font-weight: 700;
+    background-color: var(--PRIMARY-COLOR);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: var(--BG-COLOR);
+    border: var(--PRIMARY-COLOR) 1px solid;
+    color: var(--PRIMARY-COLOR);
+}
+
+footer {
+    background-color: var(--BG-COLOR);
+    height: 25px;
+    padding: 10px;
+    border-top: var(--SECONDARY-COLOR) 1px solid;
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+    color: var(--TEXT-COLOR);
+    text-align: center;
+}
+
+
+@media  screen and (min-width: 900px) {
+    main {
+        flex-direction: row;
+        min-height: 100vh;
+        overflow: hidden;
+    }
+    .pic {
+        width: 40%;
+        height: auto;
+    }
+    h1 {
+        font-size: 6rem;
+    }
+    
+    h1 img {
+        height: 70px;
+    }
+    .signUp {
+        width: 60%;
+        height: auto;
+    }
+
+    form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 5px 50px;
+    }
+    form div {
+        flex: 30%;
+        margin-inline: 50px;
+        min-width: 180px;
+    }
+    form > label {
+        flex: 100% ;
+    }
+    #separator::before, #separator::after {
+        width:200px;
+    }
+
+    form > button {
+        width: 250px;
+    }
+} 

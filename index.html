@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="formValidation.js" defer></script>
+</head>
+<body>
+    <main>
+        <div class="pic">
+            <h1>
+                <img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png" alt="Odin logo">
+                ODIN
+            </h1>
+            <p class="small">Image by <a href="https://www.freepik.com/author/kjpargeter" target="_blank" rel="noopener noreferrer"> kjpargeter </a> on <a href="http://www.freepik.com/" target="_blank" rel="noopener noreferrer"> Freepik </a></p>
+        </div>
+        <div class="signUp">
+            <h2>Sign Up</h2>
+            <span class="small">Register for free to get started.</span>
+            <div class="socials">
+                <button type="button">
+                    <i class="fa fa-google"></i>
+                    Sign up with Google
+                </button>
+                <button type="button">
+                    <i class="fa fa-github"></i>
+                    Sign up with Github
+                </button>
+            </div>
+            <span id="separator" class="small">Or</span>
+            <form id="signUpForm" action="/">
+                <div>
+                    <label for="fname">First Name*</label>
+                    <input autocomplete="off" type="text" name="fname" id="fname" placeholder="Your first name">
+                    <p class="errorDisplay small"></p>
+                </div>
+                <div>
+                    <label for="lname">Last Name</label>
+                    <input autocomplete="off" type="text" name="lname" id="lname" placeholder="Your last name">
+                    <p class="errorDisplay small"></p>
+                </div>
+                <div>
+                    <label for="email">Email*</label>
+                    <input autocomplete="off" type="text" name="email" id="email"placeholder="Your email">
+                    <p class="errorDisplay small"></p>
+                </div>
+                <div>
+                    <label for="telnum">Phone Number*</label>
+                    <input autocomplete="off" type="tel" name="telnum" id="telnum" placeholder="example: +123XXXXXXXXXX">
+                    <p class="errorDisplay small"></p>
+                </div>
+                <div>
+                    <label for="password">Password*</label>
+                    <input autocomplete="off" type="password" name="password" id="password" placeholder="At least 8 characters">
+                    <i class="fa fa-eye-slash icon"></i>
+                    <p class="errorDisplay small"></p>
+                </div>
+                <div>
+                    <label for="confirmPassword">Confirm Password*</label>
+                    <input autocomplete="off" type="password" name="confirmPassword" id="confirmPassword" placeholder="Passwords should match">
+                    <i class="fa fa-eye-slash icon"></i>
+                    <p class="errorDisplay small"></p>
+                </div>
+                <label for="policy">
+                    <input type="checkbox" name="policy" id="policy" required>
+                    
+                    <p class="small">I agree to all the <a href="#">Terms & Privacy Policy.</a></p>
+                </label>
+                <button type="submit">Sign up</button>
+            </form>
+            <p class="small">Already have an account? <a href="#">Log in.</a></p>
+        </div>
+    </main>
+    <footer>
+        <p class="small">&copy;Copyrights, 2024</p>
+    </footer>
+</body>
+</html>
