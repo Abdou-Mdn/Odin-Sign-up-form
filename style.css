@@ -3,7 +3,7 @@
 
 @font-face {
     font-family: 'Norse';
-    src: url(/assets/Font/Norse-Bold.otf) format('Opentype');
+    src: url(./assets/Font/Norse-Bold.otf) format('Opentype');
     font-weight: bold;
 }
 
@@ -75,7 +75,7 @@ main {
     padding: 10px;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(#0005,#000b), url(/assets/images/background.jpg);
+    background: linear-gradient(#0005,#000b), url(./assets/images/background.jpg);
     background-size: cover;
 }
 
